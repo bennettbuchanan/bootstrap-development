@@ -64,7 +64,7 @@
           quis nostrud exercitation ullamco laboris nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi.</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more about Acme, inc. <i class="fa fa-angle-double-right"></i></a></p>
+          <p><a id="jumbotron_button" class="btn btn-primary btn-lg" href="#" role="button" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Learn more about Acme, inc. <i class="fa fa-angle-double-right"></i></a></p>
         </div>
 
 
@@ -245,6 +245,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  
+    <script type="text/javascript">
+      var jumbotron_button = document.getElementById('jumbotron_button');
+      jumbotron_button.addEventListener("mouseenter", function() { 
+        $('#jumbotron_button').popover('show')
+      }); 
+      jumbotron_button.addEventListener("mouseleave", function() { 
+        $('#jumbotron_button').popover('hide')
+      });       
+    </script>
 
 </body></html>
